@@ -47,3 +47,17 @@
 **Getestet:** Mit PATH nur auf `dist\VocalSplit\ffmpeg` + System32 (ohne .venv, ohne C:\ffmpeg): Einzelmodell bs_roformer_vocals_resurrection_unwa + De-Reverb → Modelle nach `dist\VocalSplit\models` geladen, Trennung auf GPU ok (sys.prefix = portable Python). UI-Server startet, HTTP 200 auf Port 7860 vom portablen python.exe.
 **Offen:** Test auf einem zweiten PC. Die 2 im Test geladenen Modelle liegen jetzt in `dist\VocalSplit\models` (~1 GB).
 
+### 14:45 – Öffentliches GitHub-Repo erstellt und hochgeladen
+**Warum:** Nutzer möchte das Projekt auf GitHub (Wahl: öffentlich, Name VocalSplit).
+**Gemacht:** Doku auf persönliche Daten geprüft (keine gefunden). `.gitignore` (`.venv/`, `models/`, `output/`, `dist/`, `__pycache__/`, `.gradio/`) und `README.md` angelegt; in CLAUDE.md §8 Sichtbarkeit auf öffentlich gesetzt. Git lokal mit GitHub-noreply-Adresse konfiguriert (private E-Mail bleibt raus). Keine Lizenz gesetzt (Nutzer-Entscheidung offen).
+**Dateien:** `.gitignore`, `README.md` (neu), `CLAUDE.md` → §8 Sichtbarkeit
+**Befehle:**
+    git init -b main
+    git config user.name "B4turnatur"
+    git config user.email "<ID>+B4turnatur@users.noreply.github.com"
+    git add -A && git commit
+    gh repo create B4turnatur/VocalSplit --public --source . --remote origin --push
+**Ausgabe:** ✅ https://github.com/B4turnatur/VocalSplit PUBLIC main
+**Ergebnis:** ✅ Quellcode + Doku online; die portable Version (5 GB) ist nicht im Repo (zu groß für Git, Release-Limit 2 GB je Datei).
+**Offen:** Lizenz wählen; ggf. Release mit portable Version (müsste in Teile < 2 GB gesplittet werden).
+

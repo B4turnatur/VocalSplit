@@ -54,6 +54,16 @@
 **Typische Fehler:** „FEHLER: ffmpeg nicht gefunden/kopiert“ → ffmpeg in den PATH legen (F-005). Pfad mit Sonderzeichen ist ok, `start.bat` wechselt selbst in seinen Ordner.
 **Im Code:** `build_portable.bat` (Bau), `portable_start.bat` (wird zu `start.bat` in der portablen Version)
 
+## GitHub (Änderungen hochladen)
+**Wofür:** Das Projekt liegt öffentlich unter https://github.com/B4turnatur/VocalSplit.
+**Voraussetzungen:** `git`, `gh` angemeldet (`gh auth status`).
+**So geht's:**
+    git add -A
+    git commit -m "Was geändert wurde"
+    git push
+**Nicht im Repo (per `.gitignore`):** `.venv/`, `models/`, `output/`, `dist/` – werden lokal per `install.bat` / beim Benutzen / per `build_portable.bat` erzeugt.
+**Achtung:** Öffentlich → keine persönlichen Pfade, Namen, E-Mails oder Tokens in Dateien schreiben.
+
 ## Selbsttest
 **Wofür:** Prüft die Dateinamen-Logik (`tidy`, `pick_stem`) ohne GPU.
 **Aufruf:**

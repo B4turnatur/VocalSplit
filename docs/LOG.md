@@ -61,3 +61,9 @@
 **Ergebnis:** ✅ Quellcode + Doku online; die portable Version (5 GB) ist nicht im Repo (zu groß für Git, Release-Limit 2 GB je Datei).
 **Offen:** Lizenz wählen; ggf. Release mit portable Version (müsste in Teile < 2 GB gesplittet werden).
 
+### 14:50 – MIT-Lizenz hinzugefügt
+**Warum:** Nutzer hat MIT gewählt (ohne Lizenz darf niemand den Code offiziell weiterverwenden).
+**Gemacht:** `LICENSE` (MIT, Copyright 2026 B4turnatur) angelegt, Abschnitt „Lizenz“ in `README.md` ergänzt (Modelle behalten ihre eigenen Lizenzen). Committet und gepusht.
+**Dateien:** `LICENSE` (neu), `README.md` → Abschnitt „Lizenz“
+**Ergebnis:** ✅
+

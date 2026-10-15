@@ -33,4 +33,5 @@ Ergebnis: `dist\VocalSplit` – Ordner auf einen anderen PC kopieren, `start.bat
 - [docs/FEHLER.md](docs/FEHLER.md) – bekannte Fehler und Lösungen
 - [docs/ENTSCHEIDUNGEN.md](docs/ENTSCHEIDUNGEN.md) – Technik-Entscheidungen
 
-Die Modelle haben eigene Lizenzen ihrer jeweiligen Autoren.
+## Lizenz
+Code: [MIT](LICENSE). Die Modelle haben eigene Lizenzen ihrer jeweiligen Autoren.

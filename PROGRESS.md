@@ -12,7 +12,6 @@ Lokales Programm, das Gesang und Musik (und Instrumente) mit den besten KI-Model
 ## Nächste Schritte
 1. Nutzer testet mit echten Songs, Feedback einarbeiten
 2. Portable Version auf einem zweiten PC ausprobieren
-3. Lizenz fürs Repo festlegen (Nutzer entscheidet)
 
 ## Offene Fehler (Details in docs/FEHLER.md)
 - keine
@@ -29,6 +28,7 @@ Lokales Programm, das Gesang und Musik (und Instrumente) mit den besten KI-Model
 - `start.bat` → Browser auf http://localhost:7860, Song hochladen, Trennen
 
 ## Changelog (neueste oben, max. 15 Zeilen – Details in docs/LOG.md)
+- 2026-10-15 – MIT-Lizenz – LICENSE, README.md – siehe LOG.md
 - 2026-10-15 – GitHub-Repo B4turnatur/VocalSplit (öffentlich) – .gitignore, README.md – siehe LOG.md
 - 2026-10-15 – Portable Version – build_portable.bat, portable_start.bat – siehe LOG.md
 - 2026-10-15 – App gebaut + auf GPU getestet – app.py, test_app.py, start.bat, install.bat – siehe LOG.md

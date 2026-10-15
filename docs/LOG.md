@@ -67,3 +67,18 @@
 **Dateien:** `LICENSE` (neu), `README.md` → Abschnitt „Lizenz“
 **Ergebnis:** ✅
 
+### 14:46 – Portable Version auf den Desktop, Projektordner aufgeräumt
+**Warum:** Nutzer will die benutzbare Version auf dem Desktop und Speicher sparen.
+**Gemacht:**
+1. Alle Modelle aus `models\` (5,45 GB) per `robocopy /move` nach `dist\VocalSplit\models` verschoben (Duplikate überschrieben) → 19 Dateien.
+2. `dist\VocalSplit` nach `Desktop\VocalSplit` verschoben (gleiches Laufwerk → nur Umbenennen). Desktop ist lokal, nicht OneDrive.
+3. Im Projektordner gelöscht: `.venv` (5,07 GB), `output` (Testdateien), leeres `dist` und `models`.
+**Befehle:**
+    robocopy models dist\VocalSplit\models /e /move
+    Move-Item dist\VocalSplit <DESKTOP>\VocalSplit
+    Remove-Item .venv, output, dist -Recurse -Force
+**Ausgabe:** ✅ robocopy-Exitcode 1 (= Dateien kopiert, kein Fehler)
+**Ergebnis:** ✅ Desktop\VocalSplit ~12 GB (Python + Pakete ~5 GB, Modelle ~6 GB, ffmpeg 0,4 GB). Insgesamt ~6 GB gespart (venv + doppelte Modelle).
+**Getestet:** In `Desktop\VocalSplit` mit isoliertem PATH: Einzelmodell + De-Reverb → 4,0 s + 3,3 s auf GPU, kein Download (Modelle lokal).
+**Offen / Nebenwirkungen:** `start.bat` im Projektordner geht erst wieder nach `install.bat`. `build_portable.bat` braucht ebenfalls `.venv`. uv-Cache (`%LOCALAPPDATA%\uv\cache`) nicht angefasst, wird von anderen Projekten mitbenutzt.
+

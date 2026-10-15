@@ -7,6 +7,11 @@
 **Typische Fehler:** `No module named 'audioread'` → F-001 · `cublasLt64_13.dll` fehlt → F-002
 **Im Code:** `install.bat`
 
+## Wo liegt die benutzbare Version?
+**Wofür:** Die fertige App zum täglichen Benutzen.
+**So geht's:** `Desktop\VocalSplit\start.bat` doppelklicken → Browser öffnet http://localhost:7860. Ergebnisse landen in `Desktop\VocalSplit\output\`.
+**Hinweis:** Der Projektordner enthält nur noch Quellcode + Doku. Zum Weiterentwickeln dort erst `install.bat` ausführen (legt `.venv` neu an); `start.bat` im Projektordner und `build_portable.bat` brauchen diese `.venv`.
+
 ## VocalSplit starten und benutzen
 **Wofür:** Gesang und Musik (oder einzelne Instrumente) aus einem Song trennen – lokal auf der Grafikkarte.
 **Voraussetzungen:** Installation erledigt. Beim ersten Benutzen eines Modells wird es nach `models/` geladen (200–900 MB je Modell).
